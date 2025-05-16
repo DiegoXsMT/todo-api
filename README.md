@@ -1,5 +1,4 @@
 # todo-api
-# todo-api
 
 Este proyecto es una aplicación Spring Boot para gestión de tareas con APIs REST.
 
