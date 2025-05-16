@@ -23,10 +23,17 @@ cd todo-api
 ```
 ### 2. Configurar la conexión a la base de datos
 - Editaras el archivo src/main/resources/application.properties
-  spring.datasource.url=jdbc:mysql://localhost:3308/tareas  (En mi caso utilice el puerto 3308)
-  spring.datasource.username=tu_usuario
-  spring.datasource.password=tu_contraseña
-  spring.jpa.hibernate.ddl-auto=update
+  - spring.datasource.url=jdbc:mysql://localhost:3308/tareas  (En mi caso utilice el puerto 3308)
+  - spring.datasource.username=tu_usuario
+  - spring.datasource.password=tu_contraseña
+  - spring.jpa.hibernate.ddl-auto=update
+- Asegurate de crear la tabla tarea CREATE TABLE tareas (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  descripcion VARCHAR(255),
+  fecha DATE,
+  estado ENUM('PENDIENTE', 'EN_PROCESO', 'COMPLETADO') NOT NULL
+  );
+
 
 ### 3. Ejecutar el proyecto
 - Nos dirijimos a la terminal dentro de la carpeta del proyecto y ejecutamos esto para instalar todas las dependencias necesarias
